@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大白分页组件编写</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mina.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div id="box">
+
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            var El = document.getElementById('box');
+            var dp = new paging(El);
+
+            /*
+            *
+            * 可以传三个参数
+            *
+            * index 总页数  默认是一页
+            *
+            * thisdata 当前所在页数  默认是第一页
+            *
+            * fn:回调函数，反回值当前页码
+            * 
+            *
+            * 三个参数可以填可以不填，不填就是默认
+            *
+            *
+            * */
+
+
+            dp.init({
+                index:20,
+                thisdata:7,
+                fn:function (e){
+                    console.log(e)
+                }
+            });
+        }
+    </script>
+</body>
+</html>
