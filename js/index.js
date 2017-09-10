@@ -21,15 +21,15 @@ function paging(el){
     '</div>';
     
 
-    this.pageNumber = document.querySelector('.pageNumber');
-    this.page = this.pageNumber.querySelector('.page');
+    this.pageNumber = el.querySelector('.pageNumber');
+    this.page = el.querySelector('.page');
 
     this.pageIndex = null;
 
-    this.pageHome = this.pageNumber.querySelector('.pageHome');
-    this.pageUp = this.pageNumber.querySelector('.pageUp');
-    this.pageNext = this.pageNumber.querySelector('.pageNext');
-    this.pageLast = this.pageNumber.querySelector('.pageLast');
+    this.pageHome = el.querySelector('.pageHome');
+    this.pageUp = el.querySelector('.pageUp');
+    this.pageNext = el.querySelector('.pageNext');
+    this.pageLast = el.querySelector('.pageLast');
 
     this.settings = {
         index:1,
