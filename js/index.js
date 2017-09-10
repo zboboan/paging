@@ -23,7 +23,7 @@ function paging(el){
 
     this.pageNumber = el.querySelector('.pageNumber');
     this.page = el.querySelector('.page');
-
+    
     this.pageIndex = null;
 
     this.pageHome = el.querySelector('.pageHome');
