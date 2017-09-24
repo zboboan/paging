@@ -77,7 +77,7 @@ paging.prototype.pageList = function(index,ints,url) {
             int = 0;
         }
         for (var j = 0; j < 5; j++) {
-            list1 += "<a href='"+url+(j + 1)+"' data-index=" + (j + 1) + ">" + (j + 1) + "</a>";
+            list1 += "<a href='"+url+"' data-index=" + (j + 1) + ">" + (j + 1) + "</a>";
         }
         if (index > 5) {
             list1 += "<span class='PNP'>...</span>";
@@ -85,16 +85,16 @@ paging.prototype.pageList = function(index,ints,url) {
     } else if (int > 3 && int < index - 2) {
         list1 += "<span class='PNP'>...</span>";
         for (var i = int - 3; i < int - 1; i++) {
-            list1 += "<a href='"+url+(i + 1)+"' data-index=" + (i + 1) + ">" + (i + 1) + "</a>";
+            list1 += "<a href='"+url+"' data-index=" + (i + 1) + ">" + (i + 1) + "</a>";
         }
-        list2 = "<a href='"+url+int+"' data-index=" + int + ">" + int + "</a>";
+        list2 = "<a href='"+url+"' data-index=" + int + ">" + int + "</a>";
     }
     ;
 
     if (int < index - 2 && int > 3 && index > 5) {
-        list2 = "<a href='"+url+int+"' data-index=" + int + ">" + int + "</a>";
+        list2 = "<a href='"+url+"' data-index=" + int + ">" + int + "</a>";
         for (var i = int; i < int + 2; i++) {
-            list3 += "<a href='"+url+(i + 1)+"' data-index=" + (i + 1) + ">" + (i + 1) + "</a>";
+            list3 += "<a href='"+url+"' data-index=" + (i + 1) + ">" + (i + 1) + "</a>";
         }
         list3 += "<span class='PNP'>...</span>";
     } else if (int >= index - 2 || index == 4 || index == 5) {
@@ -114,7 +114,7 @@ paging.prototype.pageList = function(index,ints,url) {
         }
 
         for (var k = s; k < index; k++) {
-            list3 += "<a href='"+url+(k + 1)+"' data-index=" + (k + 1) + ">" + (k + 1) + "</a>";
+            list3 += "<a href='"+url+"' data-index=" + (k + 1) + ">" + (k + 1) + "</a>";
         }
     }
     this.page.innerHTML = list1 + list2 + list3;
